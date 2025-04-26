@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ritika Varshney | Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      color: #333;
+      line-height: 1.6;
+    }
+
+
+.nav-fixed-horizontal {
+  position: fixed;
+  top: 2px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+  background-color:  #e8f0fe;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-fixed-horizontal a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-fixed-horizontal a:hover {
+  color: #007bff;
+}
+
+.nav-fixed-horizontal i {
+  font-size: 18px;
+}
+
+
+    header {
+      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .social-icons {
+      position: absolute;
+      top: 55px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      color: #2c3e50;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #007acc;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #2c3e50;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    header h2 {
+      font-size: 2rem;
+      color: #007acc;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .resume-button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 25px;
+      font-size: 1rem;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+      width: max-content;
+    }
+
+    .resume-button:hover {
+      background-color: #005f99;
+    }
+
+    section {
+      padding: 2rem;
+      margin: 1.5rem auto;
+      max-width: 1100px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+      transition: transform 0.3s ease;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 0.5rem;
+    }
+
+    h2.section-title i {
+      margin-right: 10px;
+      color: #007acc;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      color: #333;
+      margin: 1.5rem 0 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+
+    li {
+      margin-bottom: 0.7rem;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #005f99;
+      text-decoration: underline;
+    }
+
+    .image-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+
+    .image-row img {
+      width: 300px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+#about {
+  padding: 10px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-img {
+  width:590px;
+  height:490px;
+  border-radius: 40%;
+  object-fit: cover;
+}
+
+.section-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#about p {
+  font-size: 22px;
+  line-height: 1.5;
+  color: #555;
+}
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .skills div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #e0f2f1;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .skills img {
+      width: 28px;
+    }
+
+    #contact {
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 20px;
+    }
+
+    .contact-item img {
+      width: 32px;
+    }
+
+    .contact-text {
+      font-weight: 600;
+      font-size: 20px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(120deg, #2c3e50, #34495e);
+      color: white;
+      margin-top: 2rem;
+      border-top: 4px solid #00f2fe;
+    }
+
+    @media (max-width: 768px) {
+      .image-row img {
+        width: 90%;
+        max-width: 300px;
+      }
+
+      .skills {
+        justify-content: flex-start;
+      }
+
+      .social-icons {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+<div class="nav-fixed-horizontal">
+  <a href="#about"><i class="fas fa-user"></i><span>About Me</span></a>
+  <a href="#training"><i class="fas fa-chalkboard-teacher"></i><span>Training</span></a>
+  <a href="#projects"><i class="fas fa-code"></i><span>Projects</span></a>
+  <a href="#contact"><i class="fas fa-envelope"></i><span>Contact Me</span></a>
+</div>
+
+
+
+
+
+
+<header>
+  <div class="social-icons">
+    <a href="https://github.com/ritikavarshney458" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/ritika-varshney-" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:ritikavarshney20042@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://leetcode.com/ritika_2004" target="_blank"><i class="fas fa-code"></i></a>
+  </div>
+
+  <h1>Welcome to My Portfolio</h1>
+  <h2>Hi, I'm Ritika Varshney</h2>
+  <p>I'm a Cloud Computing Enthusiast and Aspiring Cloud Engineer. Let's Connect!</p>
+</header>
+
+<section id="about">
+  <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
+  <div class="about-container">
+    <img src="https://media-hosting.imagekit.io/d86e7f3148134e75/WhatsApp%20Image%202025-04-23%20at%2023.47.04_f4a3e097.jpg?Expires=1840040591&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dRLyG4xt2N8kzr2g4hDQWLSE3DdHGggifkVh7erksonTw~VzsJbTfnLUAcZp2cop9FkgrPNqgA7hV0bsnOPqWsFYhNp6xFU1lD1CmLKXhA-0MIHm-gOHlperiG2q0F9faAdcAoYILCTc-YhaeIOBc4Ic4sghkBz4P928jx2go9eoj8jjAI8fP6WGHd2cmTUnX2WWVzVJ6C5yTTToOcoUKxbJxuvM2HVxQut1RkUjwF-U9A93dFIB8C8c9ShgnrEi9kbUHPK4qa46P0JqhCpXNq4x~WL9ISbztipsdtOzZ3kxdzB8ZPC2Zk5pzHfdGMqPoCZEuokux-OmW4JQMnPjiA__" alt="Ritika Varshney" class="about-img" />
+    <p>Hi, I’m Ritika Varshney, a B.Tech Computer Science student at Lovely Professional University, specializing in Cloud Computing. My ultimate career goal is to become a Cloud Engineer. I enjoy creating, designing and deploying scalable, cloud-native applications using platforms like Microsoft Azure and AWS. I’m passionate about cloud architecture, DevOps, and continuous learning in emerging tech. I am committed to continuously advancing my skills in cloud technologies, DevOps practices, and infrastructure automation.</p>
+  </div>
+</section>
+
+
+
+<section id="skills">
+  <h2 class="section-title"><i class="fas fa-tools"></i>Skills & Technologies</h2>
+
+  <h3>Languages</h3>
+  <div class="skills">
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><span>Java</span></div>
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"><span>C</span></div>
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"><span>C++</span></div>
+  </div>
+
+  <h3>Web Technologies</h3>
+  <div class="skills">
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><span>HTML</span></div>
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><span>CSS</span></div>
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><span>JavaScript</span></div>
+  </div>
+
+  <h3>Cloud Platforms</h3>
+  <div class="skills">
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"><span>AWS</span></div>
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"><span>Azure</span></div>
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"><span>GCP</span></div>
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><span>Containers</span></div>
+  </div>
+
+  <h3>Database</h3>
+  <div class="skills">
+    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"><span>MySQL</span></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title"><i class="fas fa-laptop-code"></i>Projects</h2>
+
+
+    <h3>Cloud-Powered Cybersecurity AI Chatbot | Python, Flask, Dialogflow API (Jan 2025 - Feb 2025)</h3>
+    <div style="display: flex; gap: 4rem; margin: 2rem 0; flex-wrap: wrap; justify-content: center;">
+    <img src="https://media-hosting.imagekit.io/3e4111e3e5f4462b/WhatsApp%20Image%202025-04-23%20at%2023.46.58_d129a7c6.jpg?Expires=1840041345&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FExc2BoHvJr0EjlBFQIMISgDhVR6NfypQNrBPKaPnpykYmKLimHicWONo9yn~mIZR4jJzOPwMwUC05fprKamZFVKg5EWm1ZbIptJl6TLG45OdEe8G8USudk3TWdBOwntVAMuBtLlOa2ilI2884OrUYY9jSYsghxwS6ib4jTkdDmPQ4q-MwuloR-JqI0Of8mbEXfYpXNvDWcM4e3T9RpJXiw6SKaniGbh1m1JFyNUu9Tl4XL8T3ax6aKkCLH~HttADDVNmd789XjpcFAQ6Z3xrW~edaMP6l8y~CJOZAUBdfH7TSRNk1-l2tFXDzQIs~3XU8meZNZaEdmvbb6CiFQm8w__" alt="Cybersecurity Chatbot Screenshot 1" style="width: 440px; height: 320px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;">
+    <img src="https://media-hosting.imagekit.io/04b718bf28554f48/WhatsApp%20Image%202025-04-23%20at%2023.47.03_8d769550.jpg?Expires=1840040836&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=jVpjA-SW7sE1-1WgGpUUohvri-sp17qQkHOCFCAQ~JD9TJUpwG-TIdCgY4ycVK8WKgnQ-tdtY4yLR-gxwOnqkicuFd~DWJ~Cv66ImIPNDtxkvyMMMUNc7K9oHWnAk7HfBQfADNpH2VE0bqg6Hnj8gmSuJEFbTCnV322leGmOTnpQtE4XOYuEmiaaKyVr8D6jgvAwHjo1g737Z2VAFWB9Xo0PXg5JVEnH-wv96ZDJVyz0d1vrNpQJGgrNDW~jBBJtkGYMVqdyEeqhsg9pZ37KjaosyPCvhVZ6ggTh4YrMgyOJS07QDCevtAlEp8kIwZI0Jq9H3Tx0AlJL0HkVneDs~g__" alt="Cybersecurity Chatbot Screenshot 2" style="width: 440px; height: 320px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;">
+  </div>
+
+
+
+    <ul>
+      <li>Developed an AI-Chatbot using Dialogflow API to educate users about cybersecurity threats.</li>
+      <li>Deployed on Google Cloud to ensure scalability, real-time interactions, and high availability.</li>
+      <li>Frontend built using HTML, CSS, and JavaScript for an interactive experience.</li>
+      <li>Backend using Python and Flask with RESTful APIs to handle requests and integrate with Dialogflow API.</li>
+      <li><a href="https://github.com/ritikavarshney458/Cyber_Security_AI_Chatbot">GitHub Repository</a></li>
+    </ul>
+    <h3>Notes App – Full Stack Development Project | MERN Stack (Jun 2024 - July 2024)</h3>
+     <div style="display: flex; gap: 4rem; margin: 2rem 0; flex-wrap: wrap; justify-content: center;">
+    <img src="https://media-hosting.imagekit.io/a4be4ffce711496c/WhatsApp%20Image%202025-04-23%20at%2023.46.58_f377aff9.jpg?Expires=1840040839&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yWDWdMHglipcz6Orw5sEA~e1WnhsXqsiS1UZ-Pg2vGonmFGb3V6uBm-SkRgeFHnheAiIYhS4RUyWcruyNd00HEyddVqFQJeMPjWd8pQX7Rm6duLQ324wSWycozNEp9E6diwzjJHH3-~N4dIJwC1X-5V1Kulmfn0GcMllAwpxIdDl-yIDPVhhgqJdRWMe-cRKpNwv6ZquBfvtzEGSFqDqzboAuTYA7M24tyDOEo43VTxej3B7G5U2tKjvtvqtxlp6W9Y0VvcQYZUzR1j1hE1xTpm3ly18uf4VAEQRpdkHEb6FuQ0lhSiN3u56VQ82CesNLGfDXiYMEk99BpyiWlcsAA__" alt="Notes App Screenshot 1" style="width: 440px; height: 320px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;">
+    <img src="https://media-hosting.imagekit.io/b3b082b9f8184aaa/WhatsApp%20Image%202025-04-23%20at%2023.46.58_095149c0.jpg?Expires=1840040840&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Rfl26L4KTXI~~wqDwhY0ez5FJa0~sq6Y-9pphCXJuT9tRlU2f-A-bzVC098LB3PbuabP~fKPZn71XM2DRLdu468KFto1OBzuCx8KBAfTGTEkzvVd5xXGJFXbvlCSCYbdN60X7noTqtN0B3UNfR3J9zQp4uzf8uV~SfVYjx0FU1KZQ7tR4ZO46WBYGmB3VHDqQ2YgyMZgvrU4hd9elw5B~w99f4ak3RWdmadEJAa26kodybhluS-TuP3kqaATbNVhqfXCLjBo4o5Z8xkmJj5CwtHWXTzwYfdPWCsrBqVp3kmUJSxdJOEF6rzp0pPBAPOfaNH~t~k025q3Ap9roIQvQg__" alt="Notes App Screenshot 2" style="width: 470px; height: 320px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;">
+  </div>
+
+    <ul>
+      <li>Full-stack Notes App with CRUD functionality.</li>
+      <li>Frontend in React.js with Redux/Context API for state management.</li>
+      <li>MongoDB & Mongoose for efficient data handling.</li>
+      <li>Secure authentication using JWT & Firebase Auth.</li>
+      <li><a href="https://github.com/ritikavarshney458/CipherSchool-Project">GitHub Repository</a></li>
+    </ul>
+  </section>
+
+
+  <section id="training">
+    <h2 class="section-title"><i class="fas fa-award"></i>Training</h2>
+
+   
+    <h3>Full-Stack Development Using MERN Stack (Cipher Schools | Jun 2024 - Jul 2024)</h3>
+
+<div style="display: flex; gap: 4rem; margin: 1rem 0; justify-content: center; flex-wrap: wrap;">
+    <img src="https://media-hosting.imagekit.io/0a7f918626634302/WhatsApp%20Image%202025-04-23%20at%2023.46.59_74e9f014.jpg?Expires=1840040843&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=s-gPyRC9GbN5jiKS37rbMdyDXDH9u2fLNN55yXXq-7uEqDZ4nxUTWjVI~WE4udbYMt~5coPCxOk-5sXVudIM8KlhfwDeHN6J1-Icu4d5efmw5OIwTvXzH9Mtk5reKmWxjXKuAaKWObgXgxkr6KyP6XMrVptz91iDdKPo-Pyot1WibuAXUd3fIUW8ROMHO8sqY187MQveSc7SjrkzQX9d71XtQtJNBWJ5wEmbOslMytGfzI4-vf2KLjlH18-aH6b03VmU07FQmUIYt-YwNy4skQpz-TmxjIm0XlNanZUyfNVjbAX~4Y0Clhgnv5Ofa8YSZ7pLpNR1Ypcrv~o-vbZ7mg__" alt="Training Image 1" style="width: 430px; height: 300px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;">
+    <img src="https://media-hosting.imagekit.io/a616350921534c4e/WhatsApp%20Image%202025-04-23%20at%2023.46.59_18b19d82.jpg?Expires=1840040846&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QTLEt8Qgr9boaNhEJwOM5QjK~6Qg9Bha~FekKBE2XpE2GMgYUdy6XnnpBOKSJ~8r1dHhHfCm4It~kpr1o9Ji-XUijs5z1g9CqGKjYGpLfOV~i0m0rUa1-HVy7cKZx7sa0xrf5FuD12HUyjJhlXDsb441AJ7a4mSHFARxJGf5YnDXVztOBkiYxa8MT2zjXXKPiubXAysvi-BUf2-tlpuLAgCES~Hl7NwLcPXcr4Up~AOH6n46MlyBexydCul7lme0gbm6HFgjNC8LLp1b6WDQE2yt7WxvW9KAa10AM3G2dQfLGzSKsW7fcIwi2Qaqp07p1KUCXLuuAr~tlQ1~9JTBHQ__" alt="Training Image 2" style="width: 440px; height: 300px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;">
+  </div>
+
+    <ul>
+      <li>Completed an intensive hands-on training program focused on MongoDB, Express.js, React.js, and Node.js (MERN Stack).</li>
+      <li>Gained expertise in front-end development using React.js, including component-based architecture, state management (Redux/Context API), and UI libraries like Material-UI/Tailwind CSS.</li>
+      <li>Designed and implemented RESTful APIs using Node.js & Express.js, integrating JWT-based authentication and middleware for security.</li>
+      <li>Worked with MongoDB & Mongoose for database management, CRUD operations, schema design, data validation, and indexing.</li>
+      <li>Built and deployed full-stack applications on Vercel, Netlify, and Render with CI/CD.</li>
+    </ul>
+  </section>
+
+<section id="certificates">
+  <h2 class="section-title"><i class="fas fa-certificate"></i>Certificates</h2>
+<div style="display: flex; justify-content: center; gap: 1rem; overflow-x: auto; flex-wrap: nowrap; margin: 1rem 0;">
+    <img src="https://media-hosting.imagekit.io/55ab5af79c8b46bc/WhatsApp%20Image%202025-04-23%20at%2023.47.00_5d520e27.jpg?Expires=1840040832&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=lBSC-0GTcc9l52D4prDBXFKLw0fxeA880-EmrnZmhMrBsx4d45S2ezZiaIB8zQTgSwTdpZKnqAV1O8sAwvrj3a9Hl0ZQGl1n5dNjqMln6VWps4RVCFaHDbg7DBIw5y8EoJJ3q12hAtFs63p0HJh5boyUgImYUWKhMCrDTKgK8C8MHaNx8bPlwcmtKmsbiGhvPFiMNMR0V3BqVlhhLulryo336Hg~AonJ5OrcOXD85PvVPr1axEOEN~N3scHpOkfUOOOJHOfDNcE3Ovo1v5u40NJZTCvrTNpd0Ws900f92iWNDob4oopCuWSVFjPlvFwaJsi-8iVfwYgvQqTHvzG2aQ__" alt="AWS Certificate" style="width: 310px; height: auto; border-radius: 5px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+<img src="https://media-hosting.imagekit.io/39fc21525f5d45f2/WhatsApp%20Image%202025-04-23%20at%2023.47.00_2be4d2dd.jpg?Expires=1840040831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BwpxXNiU7yo-2jqRvYMqLfrqzyxRfzD3fdsEn7QvX7j1vact3Gfp2FuKCQCzK8RcCeVLbrbiKoEgspVA9CZ6s7VosLzppEJDNZkq7QkBpdTt76ieg7KHktPCznYF4BjbZl98srH-Q4103CMYKKVNS~rUEgRofVhpTKVaUfHHtAZlmfJf7i50~uqA8lUMrncOgNAhHGAO1Igq3oh4S74Z9BkFmr7RwxMkbwGqcLbfgUjLXvuPhBqFpnrtJ21vBSeJnUBv~ULjqXFEmoA~cc5KPShRkdW-z4u7SoUI55hSFClzs2t1x5EUEZvn1Szx5VY3Bl7pBdJIc6YwHDVmMNEgHw__" alt="IoT Certificate" style="width: 360px; height: auto; border-radius: 5px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <img src="https://media-hosting.imagekit.io/a204709f5e1747ff/WhatsApp%20Image%202025-04-23%20at%2023.46.59_cd316882.jpg?Expires=1840040648&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=c99F5LgQyMbwKJPyw3aF~G7AYprZShMsctD-ZyfwEISbB57K6VtDgyfJY7mC9zHFVBdas2iPumbYUKuzW9iXjz5R6MsUrS-ywrtVsCb3edSSKQr08oBf329ORjRUYsLuEk1ZAi2pl68LZ5u306QdkUhxUPQZICBR~K3vVETiVTs3Q3TyHDQjcZ6I1F0Bt7i86YpUq6CjV~xrp3S1sYxELoiM9j0UEbd11DAinGNAPAhRmYIj4--ReOit4dkvdS~NF5bG99i~DBaCf3M7kR062ZGWzMaycBjcmKu5hqQLPLrUtaFWj75XDu7pUSwl9DxjsbgOpDJlGv5mhR6wX9pKiQ__" alt="Azure Certificate" style="width: 350px; height: 280px; border-radius: 5px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  </div>
+
+    <ul>
+      <li>AWS Fundamentals – Coursera (Feb 2025)</li>
+      <li>Introduction to Microsoft Azure – Coursera (Feb 2025)</li>
+      <li>Introduction to Internet of Things – NPTEL (Nov 2024)</li>
+    </ul>
+  </section>
+
+<section id="achievements">
+  <h2 class="section-title"><i class="fas fa-award"></i>Achievements</h2>
+
+<div style="display: flex; justify-content: center; gap: 1rem; overflow-x: auto; flex-wrap: nowrap; margin: 1rem 0;">
+    <img src="https://media-hosting.imagekit.io/0e682f0de7fa4cd2/WhatsApp%20Image%202025-04-23%20at%2023.46.58_9a781cae.jpg?Expires=1840041851&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yB4-cRKVzYIh8mN~5UqpiFOXMDkpYc4lQ5OaZeArPEiX~pFLQj8YOWlDUa4tizr0YO4DAgmlDhLO0ixY57qO2xj6lHXQuU1K6hU-UE~X5sUIMFuSyKoDNHuL31Yy5iWqjQU--fxGM0W~TIIFkvpxpByiOpWpmyOIMFS7FtPyVMxfH3ipkbfMUHsLKYYrw4Uzo-7fJe1OR6NmWth8-ZGtHSR2ECzrjMV4YmSf-cX4BcE3UQ0qDCf7YG3maTBzVzu8wW2TYPjQw6ub9k2tZ3bWnIwLrqaK~Dz4ofpMHkHRDFk~FfFFJKAEEvUE4gHLEJnm12DpkVwO-P9kc~49SqSp5g__" alt="Smart India Hackathon" style="width: 340px; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <img src="https://media-hosting.imagekit.io/737a1e9be94e4b1f/WhatsApp%20Image%202025-04-23%20at%2023.46.58_0eb7819c.jpg?Expires=1840042095&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Rwnt7uacS-56UfLdS6QjfZi~TA-SGdmZIl-js5VaOX45xpGnvzHySSZKTVBBxJ6WE-9ZFLOgwa~JSK3cV3oryFnIllcep-XFLbtGUPBPVCuzzdWS~FGyMRp7nDmOUYvz3K7bQggCAs6sKkqk5N9i0k6iEl4OyTkvjrZmIjy94zbNdiMRpuXsjZWqhVFvsYY-hkWngYp291fmeRoMA-PFFCtyOWr7p-LRfz7RCfwSVNT1vmnNK6Xg9U7kttqFKI-Y2dpkAW1Ql1Jvm-cbab1mvlz6YsAjyiLIvVkF2JE0qcpPniCwjDDaByBu0sxd9DviI6KqI09ry9fyLQ8GcNZn5Q__" alt="Self Confidence Workshop" style="width: 340px; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <img src="https://media-hosting.imagekit.io/f66cf99cb0b747e2/WhatsApp%20Image%202025-04-23%20at%2023.46.58_7e410476.jpg?Expires=1840041906&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=leRW5vpWvfYL7O~RLIFs1qUE2wo6BeLJ1ZF5adEQKBwiCTP-0cGfjyEGN0GfNzfXeg0XAUsqiKK7tVTTZvmmRuD0he2TFHyMNIjBOACFtsnLaxmy9xfQNQxZ6tGPzY~Y3TuEDKeRA~yZBgQQJ3f~RDF3RBCHNwfHhdn7znh3ntJOuKRlf7q1Ue1NIdYvPptEI0ogMVxSJPlj6lVAkf4Zm9eZoAVar75MfQTdwykGcVtXvtYHKH0QVLm3T6LLVE9F7nK~2m1gbQzgmdWvlJOqEVHVEZMTPgWUmjbMYpt1nWufdbVVVL4G4CqToRjorO4W2zqK3Thv6yphUG0WZKf0Jw__" alt="Spelling Quiz Competition" style="width: 340px; height: auto; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  </div>
+
+    <ul>
+      <li>Participant in Smart India Hackathon</li>
+      <li>Attended sessions on "Enhancing Self-Confidence" at LPU</li>
+      <li>Spelling Quiz Competition at LPU – Competed and enhanced vocabulary & linguistic skills</li>
+    </ul>
+  </section>
+<section id="downloadResume">
+   <h2 class="section-title"><i class="fas fa-certificate"></i>Download Resume</h2>
+
+<div style="text-align:center; margin-top: 2rem;">
+  <a href="https://pdflink.to/52f51a21/" class="resume-button" download>📄 Download Resume</a>
+</div>
+</section>
+<section id="contact">
+  <h2 class="section-title"><i class="fas fa-envelope-open-text"></i>Contact Me</h2>
+  <div class="contact-container">
+    <div class="contact-item"><img src="https://img.icons8.com/color/48/gmail.png"><span class="contact-text">ritikavarshney20042@gmail.com</span></div>
+    <div class="contact-item"><img src="https://img.icons8.com/color/48/linkedin.png"><a class="contact-text" href="https://www.linkedin.com/in/ritika-varshney-" target="_blank">LinkedIn Profile</a></div>
+    <div class="contact-item"><img src="https://img.icons8.com/material-rounded/48/github.png"><a class="contact-text" href="https://github.com/ritikavarshney458" target="_blank">GitHub Profile</a></div>
+    <div class="contact-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" style="width: 28px;"><a class="contact-text" href="https://leetcode.com/ritika_2004" target="_blank">LeetCode Profile</a></div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Ritika Varshney. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
